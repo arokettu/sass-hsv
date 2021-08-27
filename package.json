@@ -1,11 +1,12 @@
 {
     "name": "sass-hsv",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "license": "MIT",
     "repository": {
         "type": "git",
         "url": "https://gitlab.com/sandfox/sass-hsv"
     },
+    "sass": "_hsv.scss",
     "devDependencies": {
         "sass": "^1.38.1"
     }
