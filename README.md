@@ -38,7 +38,7 @@ Also on Read the Docs: <https://sass-hsv.readthedocs.io/>
 
 ## Support
 
-Please file issues on our main repo at GitLab: <https://gitlab.com/sandfox/bencode/-/issues>
+Please file issues on our main repo at GitLab: <https://gitlab.com/sandfox/sass-hsv/-/issues>
 
 ## License
 
