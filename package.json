@@ -2,6 +2,8 @@
     "name": "sass-hsv",
     "version": "1.0.1",
     "license": "MIT",
+    "description": "A simple helper to introduce HSV/HSB model support to SASS",
+    "keywords": ["sass", "hsv", "hsl"],
     "repository": {
         "type": "git",
         "url": "https://gitlab.com/sandfox/sass-hsv"
