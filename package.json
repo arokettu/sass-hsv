@@ -1,10 +1,16 @@
 {
     "name": "sass-hsv",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "license": "MIT",
     "repository": {
         "type": "git",
         "url": "https://gitlab.com/sandfox/sass-hsv"
+    },
+    "homepage": "https://sandfox.dev/js/sass-hsv.html",
+    "author": {
+        "name": "Anton Smirnov",
+        "email": "sandfox@sandfox.me",
+        "url": "https://sandfox.me/"
     },
     "sass": "_hsv.scss",
     "devDependencies": {
