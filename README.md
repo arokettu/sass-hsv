@@ -30,6 +30,16 @@ a {
 }
 ```
 
+## Documentation
+
+Read full documentation here: <https://sandfox.dev/js/sass-hsv.html>
+
+Also on Read the Docs: <https://sass-hsv.readthedocs.io/>
+
+## Support
+
+Please file issues on our main repo at GitLab: <https://gitlab.com/sandfox/bencode/-/issues>
+
 ## License
 
 The library is available as open source under the terms of the [MIT License].

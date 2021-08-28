@@ -5,8 +5,6 @@ sass-hsv
 
 A simple helper to introduce `HSV/HSB`_ model support to SASS.
 
-.. _HSV/HSB: https://en.wikipedia.org/wiki/HSL_and_HSV
-
 Usage
 =====
 
@@ -33,7 +31,14 @@ The easiest way to import the helper is to use node-sass-package-importer_.
         color: hsba(270, 50%, 100%, 1); // same as hsva()
     }
 
+License
+=======
+
+The library is available as open source under the terms of the `MIT License`_.
+
+.. _HSV/HSB: https://en.wikipedia.org/wiki/HSL_and_HSV
 .. _node-sass-package-importer: https://www.npmjs.com/package/node-sass-package-importer
+.. _MIT License:        https://opensource.org/licenses/MIT
 
 .. |npm|        image:: https://img.shields.io/npm/v/sass-hsv.svg?style=flat-square
    :target:     https://www.npmjs.com/package/sass-hsv
