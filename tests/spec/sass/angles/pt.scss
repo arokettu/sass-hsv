@@ -1,0 +1,6 @@
+@use "hsv" as *;
+@use "sass:math";
+
+a {
+  color: hsv(15pt, 75%, 75%);
+}

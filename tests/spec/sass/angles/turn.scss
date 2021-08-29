@@ -1,0 +1,5 @@
+@use "hsv" as *;
+
+a {
+  color: hsv(0.125turn, 75%, 75%);
+}

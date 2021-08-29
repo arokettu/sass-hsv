@@ -1,0 +1,6 @@
+@use "hsv" as *;
+@use "sass:math";
+
+a {
+  color: hsv(math.$pi * 0.25rad, 75%, 75%);
+}
