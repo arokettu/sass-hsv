@@ -2,6 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/sass-hsv?style=flat-square)](https://www.npmjs.com/package/sass-hsv)
 [![NPM](https://img.shields.io/npm/l/sass-hsv?style=flat-square)](https://www.npmjs.com/package/sass-hsv)
+[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/sandfox/sass-hsv/master.svg?style=flat-square)](https://gitlab.com/sandfox/sass-hsv/-/pipelines)
 
 A simple helper to introduce [HSV/HSB] model support to SASS.
 
