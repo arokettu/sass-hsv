@@ -4,7 +4,7 @@
 
 *Aug 29, 2021*
 
-* Added a way to bypass libsass incompatibilty
+* Added a way to bypass libsass incompatibility
 * Added tests
 
 ## 1.0.1
