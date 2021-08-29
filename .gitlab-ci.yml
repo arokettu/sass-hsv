@@ -1,0 +1,7 @@
+test:
+  image: node:current
+  before_script:
+    - npm install
+  script:
+    - npm test
+    - tests/installation/installation.sh
