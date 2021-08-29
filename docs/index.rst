@@ -12,6 +12,11 @@ The helper tries to mimic ``hsl()`` syntax from css.
 
 The easiest way to import the helper is to use node-sass-package-importer_.
 
+Dart Sass
+---------
+
+Just import the module:
+
 .. code-block:: scss
 
     // node-sass-package-importer path syntax, adjust for your favorite importer
@@ -29,6 +34,21 @@ The easiest way to import the helper is to use node-sass-package-importer_.
         color: hsb(270, 50%, 100%); // same as hsv()
         color: hsva(270, 50%, 100%, 1); // same as hsv($h, $s, $v, $a) but alpha param is required
         color: hsba(270, 50%, 100%, 1); // same as hsva()
+    }
+
+libsass
+-------
+
+The package is designed for `sass` / Dart Sass with modules but it has support of `node-sass` / `libsass`.
+You need to import the legacy module explicitly:
+
+.. code-block::
+
+    // node-sass-package-importer path syntax, adjust for your favorite importer
+    @import "~sass-hsv/legacy"
+
+    a {
+        color: hsv(270, 50%, 100%); // #bf7fff
     }
 
 License

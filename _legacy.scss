@@ -1,0 +1,56 @@
+@function hsv($h, $s, $v, $a: 1) {
+    // normalize h to degrees
+    $h: (0deg + $h) / 1deg;
+    $h: $h % 360;
+
+    // normalize s to fractions
+    @if (not unitless($s)) {
+        $s: $s / 100%;
+    }
+
+    // normalize v to fractions
+    @if (not unitless($v)) {
+        $v: $v / 100%;
+    }
+
+    // https://en.wikipedia.org/wiki/HSL_and_HSV#HSV_to_RGB
+    $c: $s * $v;
+    $h1: $h / 60;
+    $x: $c * (1 - abs($h1 % 2 - 1));
+
+    $r1: none; $g1: none; $b1: none;
+    @if ($h1 < 1) {
+        $r1: $c; $g1: $x; $b1: 0;
+    } @else if($h1 < 2) {
+        $r1: $x; $g1: $c; $b1: 0;
+    } @else if($h1 < 3) {
+        $r1: 0; $g1: $c; $b1: $x;
+    } @else if($h1 < 4) {
+        $r1: 0; $g1: $x; $b1: $c;
+    } @else if($h1 < 5) {
+        $r1: $x; $g1: 0; $b1: $c;
+    } @else {
+        $r1: $c; $g1: 0; $b1: $x;
+    }
+
+    $m: $v - $c;
+    $r: floor(($r1 + $m) * 255);
+    $g: floor(($g1 + $m) * 255);
+    $b: floor(($b1 + $m) * 255);
+
+    @return rgba($r, $g, $b, $a);
+}
+
+// some aliases
+
+@function hsva($h, $s, $v, $a) {
+    @return hsv($h, $s, $v, $a);
+}
+
+@function hsb($h, $s, $b, $a: 1) {
+    @return hsv($h, $s, $b, $a);
+}
+
+@function hsba($h, $s, $b, $a) {
+    @return hsv($h, $s, $b, $a);
+}

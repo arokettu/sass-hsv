@@ -19,7 +19,11 @@
         "url": "https://sandfox.me/"
     },
     "sass": "_hsv.scss",
+    "scripts": {
+        "test": "mocha"
+    },
     "devDependencies": {
+        "chai": "^4.3.4",
         "mocha": "^9.1.1",
         "node-sass": "*",
         "sass": "*"
