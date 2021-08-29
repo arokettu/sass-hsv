@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2
+
+*Aug 29, 2021*
+
+* Added a way to bypass libsass incompatibilty
+* Added tests
+
 ## 1.0.1
 
 *Aug 28, 2021*

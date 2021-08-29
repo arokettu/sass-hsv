@@ -1,6 +1,6 @@
 {
     "name": "sass-hsv",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "license": "MIT",
     "description": "A simple helper to introduce HSV/HSB model support to SASS",
     "keywords": [
