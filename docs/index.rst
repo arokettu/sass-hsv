@@ -39,7 +39,7 @@ Just import the module:
 libsass
 -------
 
-The package is designed for `sass` / Dart Sass with modules but it has support of `node-sass` / `libsass`.
+The package is designed for ``sass`` / Dart Sass with modules but it has support of ``node-sass`` / ``libsass``.
 You need to import the legacy module explicitly:
 
 .. code-block::
