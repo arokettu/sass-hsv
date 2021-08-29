@@ -1,5 +1,10 @@
+# idea
 /.idea
-/node_modules
-/package-lock.json
+
+# npm. ignore names everywhere
+node_modules
+package-lock.json
+
+# project specific
 /demo.*
 /docs/index.html
