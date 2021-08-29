@@ -8,3 +8,4 @@
 /docs
 /tests
 /.mocharc.js
+/.gitlab-ci.yml
