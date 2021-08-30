@@ -18,7 +18,8 @@
         "email": "sandfox@sandfox.me",
         "url": "https://sandfox.me/"
     },
-    "sass": "_hsv.scss",
+    "scss": "_hsv.scss",
+    "main.scss": "_hsv.scss",
     "scripts": {
         "test": "mocha"
     },
