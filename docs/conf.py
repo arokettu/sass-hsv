@@ -1,6 +1,6 @@
 from datetime import datetime
 
-project = 'PHP Private Access'
+project = 'sass-hsv'
 author = 'Anton Smirnov'
 copyright = '{} {}'.format(datetime.now().year, author)
 language = 'en'
