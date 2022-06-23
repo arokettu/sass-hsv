@@ -12,7 +12,6 @@ const css = sass.compile('test.scss', {
             return new URL('file://' + packageImporter(url).file)
         }
     }],
-    loadPaths: [__dirname]
 })
 
 const data = fs.readFileSync('../test_result.css').toString();
