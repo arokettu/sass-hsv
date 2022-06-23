@@ -1,19 +1,23 @@
 'use strict';
 
 const sass = require('sass');
-const packageImporter = require('node-sass-package-importer');
+const packageImporter = require('node-sass-package-importer')();
 const fs = require('fs');
 const process = require('process');
 
-const css = sass.renderSync({
-    file: 'test.scss',
-    outputStyle: 'compressed',
-    importer: packageImporter(),
+const css = sass.compile('test.scss', {
+    style: 'compressed',
+    importers: [{
+        findFileUrl(url) {
+            return new URL('file://' + packageImporter(url).file)
+        }
+    }],
+    loadPaths: [__dirname]
 })
 
-const data = fs.readFileSync('../test_result.css');
+const data = fs.readFileSync('../test_result.css').toString();
 
-if (Buffer.compare(css.css, data) !== 0) {
+if (css.css !== data) {
     console.log('css content is different');
     console.log(`expected: "${data}"`);
     console.log(`actual:   "${css.css}"`);
