@@ -2,6 +2,7 @@
 
 module.exports = {
     spec: [
-        "tests/spec/**/*.js"
+        "tests/spec/**/*.spec.ts"
     ],
+    "require": "ts-node/register",
 }

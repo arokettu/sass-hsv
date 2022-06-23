@@ -1,47 +1,34 @@
-'use strict';
+import { assert } from 'chai';
+import { compile } from 'sass';
+import { readFileSync } from 'fs';
+import { Options } from 'sass/types/options';
 
-const chai = require('chai');
-const assert = chai.assert;
+const expected = readFileSync(__dirname + '/sass/frac/expected.css').toString().trim();
 
-const sass = require('sass');
-const fs = require('fs');
-
-const expected = fs.readFileSync(__dirname + '/sass/frac/expected.css').toString().trim();
+const options: Options<'sync'> = {
+    style: 'compressed',
+}
 
 describe('fraction units', function () {
     it('accepts unitless as fractions', function () {
-        const actual = sass.renderSync({
-            file: __dirname + '/sass/frac/fraction.scss',
-            outputStyle: 'compressed',
-        }).css.toString().trim();
-
+        const actual = compile(__dirname + '/sass/frac/fraction.scss', options).css.toString().trim();
         assert.equal(actual, expected);
     });
 
     it('accepts percent', function () {
-        const actual = sass.renderSync({
-            file: __dirname + '/sass/frac/percent.scss',
-            outputStyle: 'compressed',
-        }).css.toString().trim();
-
+        const actual = compile(__dirname + '/sass/frac/percent.scss', options).css.toString().trim();
         assert.equal(actual, expected);
     });
 
     it('does not allow incompatible units: deg', function () {
         assert.throws(function () {
-            sass.renderSync({
-                file: __dirname + '/sass/frac/deg.scss',
-                outputStyle: 'compressed',
-            });
+            compile(__dirname + '/sass/frac/deg.scss', options);
         });
     });
 
     it('does not allow incompatible units: pt', function () {
         assert.throws(function () {
-            sass.renderSync({
-                file: __dirname + '/sass/frac/pt.scss',
-                outputStyle: 'compressed',
-            });
+            compile(__dirname + '/sass/frac/pt.scss', options);
         });
     });
 });
