@@ -6,6 +6,7 @@ describe('check all hue values with 10 degree step to verify all h1 branches', f
     it('is valid', function () {
         const actual = compile(__dirname + '/sass/hue/all-degrees.scss', {
             style: 'expanded',
+            loadPaths: [__dirname + '/../..']
         }).css.toString().trim();
         const expected = readFileSync(__dirname + '/sass/hue/expected.css').toString().trim();
 

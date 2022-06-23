@@ -7,6 +7,7 @@ const expected = readFileSync(__dirname + '/sass/angles/expected.css').toString(
 
 const options: Options<'sync'> = {
     style: 'compressed',
+    loadPaths: [__dirname + '/../..']
 }
 
 describe('angle units', function () {

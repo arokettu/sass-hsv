@@ -7,6 +7,7 @@ const expected = readFileSync(__dirname + '/sass/frac/expected.css').toString().
 
 const options: Options<'sync'> = {
     style: 'compressed',
+    loadPaths: [__dirname + '/../..']
 }
 
 describe('fraction units', function () {

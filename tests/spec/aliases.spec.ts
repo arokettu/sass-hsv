@@ -8,6 +8,7 @@ const expectedAlpha = readFileSync(__dirname + '/sass/aliases/expected-alpha.css
 
 const options: Options<'sync'> = {
     style: 'compressed',
+    loadPaths: [__dirname + '/../..']
 }
 
 describe('hsv()', function () {
