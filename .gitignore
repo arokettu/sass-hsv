@@ -8,3 +8,4 @@ package-lock.json
 # project specific
 /demo.*
 /docs/index.html
+/docs/build
