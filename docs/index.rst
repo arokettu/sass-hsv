@@ -17,7 +17,9 @@ Dart Sass
 
 Just import the module:
 
-.. code-block:: scss
+.. don't ask why scilab, it just works
+
+.. code-block:: scilab
 
     // node-sass-package-importer path syntax, adjust for your favorite importer
     @use "~sass-hsv" as *;
@@ -42,7 +44,7 @@ libsass
 The package is designed for ``sass`` / Dart Sass with modules but it has support of ``node-sass`` / ``libsass``.
 You need to import the legacy module explicitly:
 
-.. code-block::
+.. code-block:: scilab
 
     // node-sass-package-importer path syntax, adjust for your favorite importer
     @import "~sass-hsv/legacy"
