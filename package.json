@@ -15,7 +15,7 @@
     "homepage": "https://sandfox.dev/js/sass-hsv.html",
     "author": {
         "name": "Anton Smirnov",
-        "email": "sandfox@sandfox.me",
+        "email": "sandfox+npm@sandfox.me",
         "url": "https://sandfox.me/"
     },
     "scss": "_hsv.scss",
