@@ -10,8 +10,6 @@ Usage
 
 The helper tries to mimic ``hsl()`` syntax from css.
 
-The easiest way to import the helper is to use node-sass-package-importer_.
-
 Dart Sass
 ---------
 
@@ -21,7 +19,7 @@ Just import the module:
 
 .. code-block:: scilab
 
-    // node-sass-package-importer path syntax, adjust for your favorite importer
+    // adjust for your favorite importer
     @use "~sass-hsv" as *;
 
     a {
@@ -46,7 +44,7 @@ You need to import the legacy module explicitly:
 
 .. code-block:: scilab
 
-    // node-sass-package-importer path syntax, adjust for your favorite importer
+    // adjust for your favorite importer
     @import "~sass-hsv/legacy"
 
     a {
@@ -58,9 +56,8 @@ License
 
 The library is available as open source under the terms of the `MIT License`_.
 
-.. _HSV/HSB: https://en.wikipedia.org/wiki/HSL_and_HSV
-.. _node-sass-package-importer: https://www.npmjs.com/package/node-sass-package-importer
-.. _MIT License:        https://opensource.org/licenses/MIT
+.. _HSV/HSB:        https://en.wikipedia.org/wiki/HSL_and_HSV
+.. _MIT License:    https://opensource.org/licenses/MIT
 
 .. |npm|        image:: https://img.shields.io/npm/v/sass-hsv.svg?style=flat-square
    :target:     https://www.npmjs.com/package/sass-hsv

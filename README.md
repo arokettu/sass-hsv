@@ -10,10 +10,8 @@ A simple helper to introduce [HSV/HSB] model support to SASS.
 
 The helper tries to mimic `hsl()` syntax from css.
 
-The easiest way to import the helper is to use [node-sass-package-importer].
-
 ```scss
-// node-sass-package-importer path syntax, adjust for your favorite importer
+// adjust for your favorite importer
 @use "~sass-hsv" as *;
 
 a {
@@ -46,5 +44,4 @@ Please file issues on our main repo at GitLab: <https://gitlab.com/sandfox/sass-
 The library is available as open source under the terms of the [MIT License].
 
 [HSV/HSB]: https://en.wikipedia.org/wiki/HSL_and_HSV
-[node-sass-package-importer]: https://www.npmjs.com/package/node-sass-package-importer
 [MIT License]:  https://opensource.org/licenses/MIT
