@@ -57,6 +57,13 @@ if packagist:
         "icon": "https://img.shields.io/packagist/dm/" + packagist + "?style=flat-square",
         "type": "url",
     })
+if npmjs:
+    html_theme_options['icon_links'].append({
+        "name": "NPM",
+        "url": "https://www.npmjs.com/package/" + packagist,
+        "icon": "https://img.shields.io/npm/dm/" + packagist + "?style=flat-square",
+        "type": "url",
+    })
 html_context = {
     'current_version': os.environ.get("READTHEDOCS_VERSION_NAME"),
     'gitlab_user': "sandfox",
