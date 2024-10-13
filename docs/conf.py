@@ -60,8 +60,8 @@ if packagist:
 if npmjs:
     html_theme_options['icon_links'].append({
         "name": "NPM",
-        "url": "https://www.npmjs.com/package/" + packagist,
-        "icon": "https://img.shields.io/npm/dm/" + packagist + "?style=flat-square",
+        "url": "https://www.npmjs.com/package/" + npmjs,
+        "icon": "https://img.shields.io/npm/dm/" + npmjs + "?style=flat-square",
         "type": "url",
     })
 html_context = {
