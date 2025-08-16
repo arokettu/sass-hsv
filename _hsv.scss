@@ -1,6 +1,6 @@
 @use "sass:math";
 
-@function hsv($h, $s, $v, $a: 1) {
+@function -hsv($h, $s, $v, $a) {
     // normalize h to degrees
     $h: math.div(0deg + $h, 1deg);
     $h: $h % 360;
@@ -43,16 +43,20 @@
     @return rgba($r, $g, $b, $a);
 }
 
-// some aliases
+// exports
+
+@function hsv($h, $s, $b, $a: 1) {
+    @return -hsv($h, $s, $b, $a);
+}
 
 @function hsva($h, $s, $v, $a) {
-    @return hsv($h, $s, $v, $a);
+    @return -hsv($h, $s, $v, $a);
 }
 
 @function hsb($h, $s, $b, $a: 1) {
-    @return hsv($h, $s, $b, $a);
+    @return -hsv($h, $s, $b, $a);
 }
 
 @function hsba($h, $s, $b, $a) {
-    @return hsv($h, $s, $b, $a);
+    @return -hsv($h, $s, $b, $a);
 }
