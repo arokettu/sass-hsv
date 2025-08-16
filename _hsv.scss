@@ -1,4 +1,5 @@
-@use "sass:math";
+@use 'sass:math';
+@use 'sass:list';
 
 @function -hsv($h, $s, $v, $a) {
     // normalize h to degrees
@@ -43,20 +44,41 @@
     @return rgba($r, $g, $b, $a);
 }
 
+@function -resolve-list($list) {
+
+}
+
+@function -resolve-args($alpha-required, $args...) {
+    @if (list.length($args) == 1) {
+        @return -resolve-list(list.nth($args, 1));
+    }
+
+    @if (list.length($args) == 3) {
+        @if ($alpha-required) {
+            @return -hsv($args...); // let it fail
+        } @else {
+            $args: list.append($args, 1); // append default
+            @return -hsv($args...);
+        }
+    }
+
+    @return -hsv($args...);
+}
+
 // exports
 
-@function hsv($h, $s, $b, $a: 1) {
-    @return -hsv($h, $s, $b, $a);
+@function hsv($args...) {
+    @return -resolve-args(false, $args...)
 }
 
-@function hsva($h, $s, $v, $a) {
-    @return -hsv($h, $s, $v, $a);
+@function hsva($args...) {
+    @return -resolve-args(true, $args...)
 }
 
-@function hsb($h, $s, $b, $a: 1) {
-    @return -hsv($h, $s, $b, $a);
+@function hsb($args...) {
+    @return hsv($args...);
 }
 
-@function hsba($h, $s, $b, $a) {
-    @return -hsv($h, $s, $b, $a);
+@function hsba($args...) {
+    @return hsva($args...);
 }
