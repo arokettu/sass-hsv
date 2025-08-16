@@ -1,7 +1,7 @@
 sass-hsv
 ########
 
-|npm| |GitLab| |GitHub| |Bitbucket| |Gitea|
+|npm| |GitLab| |GitHub| |Codeberg| |Gitea|
 
 A simple helper to introduce `HSV/HSB`_ model support to SASS.
 
@@ -65,7 +65,7 @@ The library is available as open source under the terms of the `MIT License`_.
    :target:     https://github.com/arokettu/sass-hsv
 .. |GitLab|     image:: https://img.shields.io/badge/get%20on-GitLab-informational.svg?style=flat-square&logo=gitlab
    :target:     https://gitlab.com/sandfox/sass-hsv
-.. |Bitbucket|  image:: https://img.shields.io/badge/get%20on-Bitbucket-informational.svg?style=flat-square&logo=bitbucket
-   :target:     https://bitbucket.org/sandfox/sass-hsv
+.. |Codeberg|   image:: https://img.shields.io/badge/get%20on-Codeberg-informational.svg?style=flat-square&logo=codeberg
+   :target:     https://codeberg.org/sandfox/sass-hsv
 .. |Gitea|      image:: https://img.shields.io/badge/get%20on-Gitea-informational.svg?style=flat-square&logo=gitea
    :target:     https://sandfox.org/sandfox/sass-hsv
