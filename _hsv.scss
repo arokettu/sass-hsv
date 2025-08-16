@@ -45,7 +45,16 @@
 }
 
 @function -resolve-list($list) {
+    @if (list.separator($list) != space) {
+        @error "Only space separated lists are supported";
+    }
+    @if (list.length($list) != 3) {
+        @error "List must contain exactly 3 arguments";
+    }
 
+    $list: list.append($list, 1);
+
+    @return -hsv($list...)
 }
 
 @function -resolve-args($alpha-required, $args...) {
