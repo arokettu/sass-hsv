@@ -44,17 +44,34 @@
     @return rgba($r, $g, $b, $a);
 }
 
-@function -resolve-list($list) {
-    @if (list.separator($list) != space) {
-        @error "Only space separated lists are supported";
-    }
+@function -color-list($list, $a: 1) {
     @if (list.length($list) != 3) {
-        @error "List must contain exactly 3 arguments";
+        @error "Color list must contain exactly 3 arguments";
     }
 
-    $list: list.append($list, 1);
+    $list: list.append($list, $a);
 
     @return -hsv($list...)
+}
+
+@function -alpha-list($list) {
+    @if (list.length($list) != 2) {
+        @error "Alpha list must contain exactly 2 arguments";
+    }
+
+    @return -color-list($list...);
+}
+
+@function -resolve-list($list, $a: 1) {
+    @if (list.separator($list) == 'slash') {
+        @return -alpha-list($list);
+    }
+
+    @if (list.separator($list) == space) {
+        @return -color-list($list);
+    }
+
+    @error "Colors must be a space separated list. Colors with alpha channel must be a slash separated list";
 }
 
 @function -resolve-args($alpha-required, $args...) {
