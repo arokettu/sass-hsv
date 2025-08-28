@@ -3,10 +3,13 @@
 /node_modules
 /package-lock.json
 /demo.*
+/debug
 
 # no needed in node package
 /docs
 /tests
-/.mocharc.js
-/.gitlab-ci.yml
+/*.js
+/*.yml
 /tsconfig.json
+/*.yaml
+/CHANGELOG.md
