@@ -39,9 +39,9 @@
     @return rgba($r, $g, $b, $a);
 }
 
-/**
- * Unit normalization only happens in lists
- */
+//
+// Unit normalization only happens in lists
+//
 @function -hsv-normalize($h, $s, $v, $a) {
     @if ($h == none) {
         $h: 0deg;
