@@ -1,2 +1,5 @@
 @use "~sass-hsv" as *;
-@import "../test";
+
+a {
+  color: hsv(270, 50%, 100%);
+}
