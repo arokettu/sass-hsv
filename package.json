@@ -10,7 +10,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://gitlab.com/sandfox/sass-hsv"
+        "url": "git+https://gitlab.com/sandfox/sass-hsv.git"
     },
     "homepage": "https://sandfox.dev/js/sass-hsv.html",
     "author": {
