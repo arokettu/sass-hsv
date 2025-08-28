@@ -20,7 +20,7 @@ Just import the module:
 .. code-block:: scilab
 
     // adjust for your favorite importer
-    @use "sass-hsv" as *;
+    @use "~sass-hsv/hsv" as *;
 
     a {
         // the simplest

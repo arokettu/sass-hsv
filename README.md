@@ -12,7 +12,7 @@ The helper tries to mimic `hsl()` syntax from css.
 
 ```scss
 // adjust for your favorite importer
-@use "sass-hsv" as *;
+@use "~sass-hsv/hsv" as *;
 @use "sass:list";
 
 a {
