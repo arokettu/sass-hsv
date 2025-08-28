@@ -27,12 +27,12 @@ describe('fraction units', function () {
     it('does not allow incompatible units: deg', function () {
         assert.throws(function () {
             compile(__dirname + '/sass/frac/deg.scss', options);
-        });
+        }, 'have incompatible units');
     });
 
     it('does not allow incompatible units: pt', function () {
         assert.throws(function () {
             compile(__dirname + '/sass/frac/pt.scss', options);
-        });
+        }, 'have incompatible units');
     });
 });

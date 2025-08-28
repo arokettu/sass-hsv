@@ -42,12 +42,12 @@ describe('angle units', function () {
     it('does not allow incompatible units: %', function () {
         assert.throws(function () {
             compile(__dirname + '/sass/angles/percent.scss', options);
-        });
+        }, 'have incompatible units');
     });
 
     it('does not allow incompatible units: pt', function () {
         assert.throws(function () {
             compile(__dirname + '/sass/angles/pt.scss', options);
-        });
+        }, 'have incompatible units');
     });
 });

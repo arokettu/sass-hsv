@@ -1,0 +1,6 @@
+@use "hsv" as *;
+@use "sass:list";
+
+a {
+  color: hsv(list.slash(270 50% 100% 1, 1));
+}

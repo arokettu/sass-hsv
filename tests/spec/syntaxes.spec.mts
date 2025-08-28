@@ -33,4 +33,31 @@ describe('syntaxes', function () {
         const actual = compile(__dirname + '/sass/syntaxes/hsva-list.scss', options).css.toString().trim();
         assert.equal(actual, expectedAlpha);
     });
+
+    it('enforces alpha list length', function (){
+        assert.throws(function () {
+            compile(__dirname + '/sass/syntaxes/alpha-too-long.scss', options);
+        }, 'Alpha list must contain exactly 2 arguments');
+    });
+
+    it('enforces color list length', function (){
+        assert.throws(function () {
+            compile(__dirname + '/sass/syntaxes/color-too-short.scss', options);
+        }, 'Color list must contain exactly 3 arguments');
+        assert.throws(function () {
+            compile(__dirname + '/sass/syntaxes/color-too-long.scss', options);
+        }, 'Color list must contain exactly 3 arguments');
+        assert.throws(function () {
+            compile(__dirname + '/sass/syntaxes/color-too-short-alpha.scss', options);
+        }, 'Color list must contain exactly 3 arguments');
+        assert.throws(function () {
+            compile(__dirname + '/sass/syntaxes/color-too-long-alpha.scss', options);
+        }, 'Color list must contain exactly 3 arguments');
+    });
+
+    it('enforces separator', function (){
+        assert.throws(function () {
+            compile(__dirname + '/sass/syntaxes/comma.scss', options);
+        }, 'Missing argument $v');
+    });
 });

@@ -37,7 +37,7 @@ describe('hsva()', function () {
     it('requires alpha param', function () {
         assert.throws(function () {
             compile(__dirname + '/sass/aliases/hsva-error.scss', options);
-        });
+        }, 'Missing argument $a');
     });
 });
 
@@ -50,6 +50,6 @@ describe('hsba()', function () {
     it('requires alpha param', function () {
         assert.throws(function () {
             compile(__dirname + '/sass/aliases/hsba-error.scss', options);
-        });
+        }, 'Missing argument $a');
     });
 });

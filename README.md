@@ -12,7 +12,8 @@ The helper tries to mimic `hsl()` syntax from css.
 
 ```scss
 // adjust for your favorite importer
-@use "~sass-hsv" as *;
+@use "sass-hsv" as *;
+@use "sass:list";
 
 a {
     // the simplest
@@ -26,6 +27,11 @@ a {
     color: hsb(270, 50%, 100%); // same as hsv()
     color: hsva(270, 50%, 100%, 1); // same as hsv($h, $s, $v, $a) but alpha param is required
     color: hsba(270, 50%, 100%, 1); // same as hsva()
+  
+    // list syntax (since 2.0)
+    color: hsv(270 50% 100%);
+    color: hsv(270 50% 100% / 50%); // once it's available in sass
+    color: hsv(list.slash(270 50% 100%, 50%)); // available today
 }
 ```
 
