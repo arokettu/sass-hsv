@@ -18,8 +18,8 @@ The helper tries to mimic `hsl()` syntax from css.
 a {
     // the simplest
     color: hsv(270, 50%, 100%); // #bf7fff
-    // use other angle units for h and fractions for s & v
-    color: hsv(0.75turn, 0.5, 1); // #bf7fff
+    // use other angle units for h and unitless percents for s & v
+    color: hsv(0.75turn 50 100); // #bf7fff, only with list syntax
     // use alpha channel
     color: hsv(270, 50%, 100%, 0.5); // rgba(191, 127, 255, 0.5)
 
