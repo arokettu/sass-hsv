@@ -1,7 +1,21 @@
 @use 'sass:math';
+@use 'sass:meta';
 @use 'sass:list';
 
 @function -hsv($h, $s, $v, $a) {
+    @if (meta.type-of($h) != 'number') {
+        @error "$h must be a number";
+    }
+    @if (meta.type-of($s) != 'number') {
+        @error "$s must be a number";
+    }
+    @if (meta.type-of($v) != 'number') {
+        @error "$v must be a number";
+    }
+    @if (meta.type-of($a) != 'number') {
+        @error "$a must be a number";
+    }
+
     // normalize h to degrees
     $h: math.div(0deg + $h, 1deg);
     $h: $h % 360;
