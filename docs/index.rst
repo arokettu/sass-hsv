@@ -42,6 +42,32 @@ Just import the module:
         color: hsv(list.slash(270 50% 100%, 50%)); // available today
     }
 
+Upgrade
+=======
+
+2.x to 3.0
+----------
+
+* Unitless numbers for saturation and value/brightness changed their meanings:
+
+  * In the legacy syntax unitless values are no longer supported and will throw an error
+  * In the list syntax unitless values changed their meaning from fractions to percents
+
+    .. code-block:: scilab
+
+        a {
+            // these declarations produce the same color:
+            color: hsv(0.75turn .5 1); // in 2.x
+            color: hsv(0.75turn 50 100); // in 3.x
+        }
+
+    Since 3.0 was released only 18 hours after 2.0, you are unlikely to encounter this incompatibility in your code
+
+1.x to 2.0
+----------
+
+If you used a legacy import (``'sass-hsv/legacy'``) for libsass, it's no longer available, please stay on 1.x.
+
 License
 =======
 

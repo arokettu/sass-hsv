@@ -9,3 +9,5 @@ package-lock.json
 /debug
 /docs/index.html
 /docs/build
+
+/venv
