@@ -41,21 +41,6 @@ Just import the module:
         color: hsv(list.slash(270 50% 100%, 50%)); // available today
     }
 
-libsass
--------
-
-The package is designed for ``sass`` / Dart Sass with modules but it has support of ``node-sass`` / ``libsass``.
-You need to import the legacy module explicitly:
-
-.. code-block:: scilab
-
-    // adjust for your favorite importer
-    @import "~sass-hsv/legacy"
-
-    a {
-        color: hsv(270, 50%, 100%); // #bf7fff
-    }
-
 License
 =======
 
