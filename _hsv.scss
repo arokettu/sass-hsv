@@ -7,14 +7,9 @@
     $h: $h % 360;
 
     // normalize s to fractions
-    @if (not math.is-unitless($s)) {
-        $s: math.div($s, 100%);
-    }
-
+    $s: math.div($s, 100%);
     // normalize v to fractions
-    @if (not math.is-unitless($v)) {
-        $v: math.div($v, 100%);
-    }
+    $v: math.div($v, 100%);
 
     // https://en.wikipedia.org/wiki/HSL_and_HSV#HSV_to_RGB
     $c: $s * $v;
@@ -44,6 +39,23 @@
     @return rgba($r, $g, $b, $a);
 }
 
+/**
+ * Unit normalization only happens in lists
+ */
+@function -hsv-normalize($h, $s, $v, $a) {
+    @if ($h == none) {
+        $h: 0deg;
+    }
+    @if (math.is-unitless($s)) {
+        $s: $s * 1%; // unitless values are percents not fractions
+    }
+    @if (math.is-unitless($v)) {
+        $v: $v * 1%; // unitless values are percents not fractions
+    }
+
+    @return -hsv($h, $s, $v, $a);
+}
+
 @function -color-list($list, $a: 1) {
     @if (list.length($list) != 3) {
         @error "Color list must contain exactly 3 arguments";
@@ -51,7 +63,7 @@
 
     $list: list.append($list, $a);
 
-    @return -hsv($list...)
+    @return -hsv-normalize($list...)
 }
 
 @function -alpha-list($list) {
