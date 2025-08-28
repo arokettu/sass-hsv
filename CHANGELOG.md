@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.x
+
+### 3.0.0
+
+* Increased compatibility with CSS:
+  * Unitless numbers are no longer supported in the legacy syntax for saturation and value/brightness
+  * Unitless numbers in the list syntax now mean percents not fractions for saturation and value/brightness
+  * List syntax supports `none` as a hue value
+
 ## 2.x
 
 ### 2.0.0
