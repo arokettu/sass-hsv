@@ -1,8 +1,11 @@
 import { assert } from 'chai';
 import { compile } from 'sass';
 import { readFileSync } from 'fs';
-import { Options } from 'sass/types/options';
+import type { Options } from 'sass';
+import * as path from "node:path";
+import { fileURLToPath } from "url";
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const expected = readFileSync(__dirname + '/sass/aliases/expected.css').toString().trim();
 const expectedAlpha = readFileSync(__dirname + '/sass/aliases/expected-alpha.css').toString().trim();
 
